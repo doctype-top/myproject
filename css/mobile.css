@@ -1,0 +1,204 @@
+body
+{
+	background-color: grey;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position:top center;
+    font-family: Arial;
+}
+a{
+	text-decoration: none;
+	color: inherit;
+}
+.cleaner:after
+{
+    content: '';
+    display: block;
+    clear:both;
+}
+.mainbackground
+{
+    margin: 0 auto;
+    width: 100%;
+    background-color: rgba(0,0,0,0.3);
+}
+#header{
+	text-align: center;
+}
+	#logoname, #sideelements{
+		display: inline-block;
+		vertical-align: middle;
+	}
+	#logoname{
+		width: 228px;
+		height: 53px;
+		background: url(../Img/TimeLine.png) no-repeat;
+		margin-bottom: 10px;
+	}
+		#logoname>a{
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
+	#sideelements{
+		margin-left: 10px;
+		text-align: left;
+	}
+		#sideelements .smalltext{
+	    	font-size: 11px;
+	    	color: #dadad9;
+	    	display: inline-block;
+	    	vertical-align: middle;
+		}
+		.social_icons{
+			margin-top: 5px;;
+		}
+			.like{
+			    width: 73px;
+			    height: 19px;
+			    margin-right: 20px;
+			    display: inline-block;
+			    background-image:url(../Img/like.png);
+			}
+			.smallicon{
+			    width: 16px;
+			    height: 16px;
+			    display: inline-block;
+			}
+			.smallicon.rss{
+			    background-image:url(../Img/rss.png);
+			}
+			.smallicon.instagram{
+			    background-image: url(../Img/instagram.png)
+			}
+			.smallicon.youtube{
+			    background-image: url(../Img/youtube.png);
+			}
+			.smallicon.vine{
+			    background-image:url(../Img/vine.png);
+			}
+	#bottom_line{
+		background-color: #4b4949;
+    	min-height: 40px;
+    	margin-top: 20px;
+    	border-bottom: 5px solid #343333;
+    	position: relative;
+	}
+		#primary_nav{
+			position: relative;
+			padding-left: 50px;
+		}
+		#primary_nav:before{
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 40px;
+			height: 40px;
+			background: white;
+			cursor: pointer;
+		}
+			#top_menu{
+				width: 0;
+				height: 0;
+				overflow: hidden;
+				transition: width 0.5s ease, height 0.5s ease 0.5s;
+			}
+				#top_menu li{
+					color: white;
+					font-size: 1rem;
+					font-weight: bold;
+					display: block;
+					height: 35px;
+					line-height: 35px;
+					text-align: left;
+				}
+		#primary_nav.active #top_menu{
+			width: 100px;
+			height: 175px;
+			transition:  height 0.5s ease,width 0.5s ease 0.5s;
+		}
+		#search_form{
+			position: absolute;
+			height: 40px;
+			top: 0;
+			right: 0;
+			padding-right: 40px;
+			width: 0;
+			transition: width 0.5s ease;
+		}
+		#search_form:before{
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 40px;
+			height: 40px;
+			background: red;
+			cursor: pointer;
+		}
+			#search_form input{
+				display: inline-block;
+				height: 40px;
+				width: 150px;
+				padding: 0 5px;
+				border: none;
+				outline: none;
+				background-color: rgba(0,0,0,0.3);
+				color: grey;
+			}
+		#search_form.active{
+			width: 160px;
+		}
+@media screen and (min-width: 480px){
+	#sideelements{
+		width: 49%;
+		text-align: right;
+	}
+	.social_icons{
+		display: inline-block;
+		vertical-align: middle;
+		margin-left: 50px;
+	}
+}
+@media screen and (min-width: 768px){
+	body{
+		background-image: url(../Img/DuckFiles.png);
+	}
+	#sideelements{
+		width: 69%;
+	}
+	#primary_nav{
+
+	}
+	#primary_nav:before{
+		display: none;
+	}
+	#top_menu{
+		display: inline-block;
+		width: auto;
+		height: 100%;
+	}
+	#top_menu li{
+		display: inline-block;
+	}
+
+}
+@media screen and (min-width: 992px){
+	#header{
+		margin-top: 50px;
+		height: 100px;
+		padding: 0 90px;
+	}
+	#header:before{
+		content: '';
+		display: inline-block;
+		height: 100%;
+		vertical-align: middle;
+	}
+}
+@media screen and (min-width: 1140px){
+	.mainbackground{
+		width: 1140px;
+	}
+}
